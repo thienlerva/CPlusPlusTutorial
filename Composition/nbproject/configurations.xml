@@ -4,7 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>Time.h</itemPath>
+      <itemPath>Birthday.h</itemPath>
+      <itemPath>People.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -13,7 +14,8 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>Time.cc</itemPath>
+      <itemPath>Birthday.cc</itemPath>
+      <itemPath>People.cc</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -44,9 +46,13 @@
           </linkerDynSerch>
         </linkerTool>
       </compileType>
-      <item path="Time.cc" ex="false" tool="1" flavor2="0">
+      <item path="Birthday.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Time.h" ex="false" tool="3" flavor2="0">
+      <item path="Birthday.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="People.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="People.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles">
         <linkerTool>
@@ -85,9 +91,13 @@
           </linkerDynSerch>
         </linkerTool>
       </compileType>
-      <item path="Time.cc" ex="false" tool="1" flavor2="0">
+      <item path="Birthday.cc" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="Time.h" ex="false" tool="3" flavor2="0">
+      <item path="Birthday.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="People.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="People.h" ex="false" tool="3" flavor2="0">
       </item>
       <folder path="TestFiles">
         <linkerTool>
