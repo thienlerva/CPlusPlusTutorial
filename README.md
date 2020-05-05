@@ -7,3 +7,9 @@ g++ Hello.cpp -o Hello.exe
 To run program
 
 ./Hello.exe
+
+Using makefile
+
+make
+
+./Hello.exe
