@@ -7,7 +7,12 @@ main.o: main.cpp
 message.o: message.cpp message.h
 	g++ -c message.cpp
 	
+#APPNAME = jaw
+#HEADERS = $(APPNAME).h
+#include $(top_srcdir)/makeinclude/make.apprules
+
 clean: 
+	@echo "---Clearing---"
 	rm *.o output
 
 

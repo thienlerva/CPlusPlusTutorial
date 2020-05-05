@@ -25,6 +25,7 @@
                    kind="IMPORTANT_FILES_FOLDER">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>README.md</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -42,6 +43,8 @@
           </linkerDynSerch>
         </linkerTool>
       </compileType>
+      <item path="README.md" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles">
         <linkerTool>
           <linkerDynSerch>
@@ -79,6 +82,8 @@
           </linkerDynSerch>
         </linkerTool>
       </compileType>
+      <item path="README.md" ex="false" tool="3" flavor2="0">
+      </item>
       <folder path="TestFiles">
         <linkerTool>
           <linkerDynSerch>
