@@ -12,4 +12,4 @@ Using makefile
 
 make
 
-./Hello.exe
+./hello
