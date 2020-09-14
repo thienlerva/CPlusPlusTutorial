@@ -1,5 +1,5 @@
 output: main.o message.o
-	g++ main.o message.o -o output
+	g++ main.o message.o -o hello
 	
 main.o: main.cpp
 	g++ -c main.cpp
@@ -13,7 +13,7 @@ message.o: message.cpp message.h
 
 clean: 
 	@echo "---Clearing---"
-	rm *.o output
+	rm *.o hello
 
 
 
