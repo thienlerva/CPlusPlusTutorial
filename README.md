@@ -10,6 +10,10 @@ To run program
 
 Using makefile
 
+MakefileExample
+
 make
 
 ./hello
+
+make clean
