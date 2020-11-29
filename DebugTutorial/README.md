@@ -25,7 +25,7 @@ Watch a variable for changes: watch VARIABLE
 
 
 cd GNUDebugger<br/>
-make or gcc -g -lm -std=c99 -w main.c <br/>
+make or gcc -g -lm -std=c99 -w main.c   -w != Wall to show errors <br/>
 gdb run or gcc a.out<br/>
 layout next<br/>
 break isPrimes<br />
@@ -40,3 +40,6 @@ watch x<br/>
 clear isPrimes<br/>
 q<br/>
 !gcc to gcc - q -lm <br/>
+set args 20<br/>
+print args@2<br/>
+run
