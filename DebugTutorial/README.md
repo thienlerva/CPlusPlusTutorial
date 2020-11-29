@@ -40,6 +40,6 @@ watch x<br/>
 clear isPrimes<br/>
 q<br/>
 !gcc to gcc - q -lm <br/>
-set args 20<br/>
-print args@2<br/>
+set argc 20<br/>
+print argc@2<br/>
 run
