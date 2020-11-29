@@ -42,4 +42,5 @@ q<br/>
 !gcc to gcc - q -lm <br/>
 set argc 20<br/>
 print argc@2<br/>
-run
+run<br/>
+backtrace full
