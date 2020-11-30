@@ -26,6 +26,7 @@ Watch a variable for changes: watch VARIABLE
 
 cd GNUDebugger<br/>
 make or gcc -g -lm -std=c99 -w main.c   -w != Wall to show errors <br/>
+make or g++ -g -lm -w main.cpp <br/>
 gdb run or gcc a.out<br/>
 layout next<br/>
 break isPrimes<br />
@@ -43,4 +44,12 @@ q<br/>
 set argc 20<br/>
 print argc@2<br/>
 run<br/>
-backtrace full
+backtrace full<br/>
+
+cd PrimeNumber<br/>
+either make file or g++ -g -lm -Wall main.cpp<br/>
+gdb a.out<br/>
+break 10<br/>
+run<br/>
+
+
