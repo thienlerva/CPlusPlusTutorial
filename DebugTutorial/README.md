@@ -28,7 +28,7 @@ cd GNUDebugger<br/>
 make or gcc -g -lm -std=c99 -w main.c   -w != Wall to show errors <br/>
 make or g++ -g -lm -w main.cpp <br/>
 gdb run or gcc a.out<br/>
-layout next<br/>
+layout next || layout src<br/>
 break isPrimes<br />
 run<br/>
 n<br/>
@@ -51,6 +51,6 @@ either make file or g++ -g -lm -Wall main.cpp or g++ main.cpp -g<br/>
 either gdb prine or gdb a.out<br/>
 break 10<br/>
 run<br/>
-layout next <br/>
+layout next || layout src <br/>
 Note: sometimes it's stuck at new threat, just close the terminal and restart<br/>
 
