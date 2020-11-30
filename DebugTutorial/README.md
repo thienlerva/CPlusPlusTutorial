@@ -48,7 +48,7 @@ backtrace full<br/>
 
 cd PrimeNumber<br/>
 either make file or g++ -g -lm -Wall main.cpp<br/>
-gdb a.out<br/>
+either gdb prine or gdb a.out<br/>
 break 10<br/>
 run<br/>
 
