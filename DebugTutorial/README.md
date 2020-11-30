@@ -52,5 +52,5 @@ either gdb prine or gdb a.out<br/>
 break 10<br/>
 run<br/>
 layout next <br/>
-
+Note: sometimes it's stuck at new threat, just close the terminal and restart<br/>
 
