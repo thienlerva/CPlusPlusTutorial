@@ -10,9 +10,9 @@ To run program
 
 Using makefile
 
-MakefileExample
+MakefileTutorial3
 
-make
+make hello
 
 ./hello
 
