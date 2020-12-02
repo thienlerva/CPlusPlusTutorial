@@ -48,3 +48,8 @@ run:
 clean:
 	@echo "----Clearing----"
 	rm *.o hello
+
+#reference http://mrbook.org/blog/tutorials/make/
+# make hello
+# make run
+# make clean
