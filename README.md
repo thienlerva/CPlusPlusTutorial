@@ -17,3 +17,9 @@ make
 ./hello
 
 make clean
+
+C Programming
+
+run in terminal gcc hello.c -o hello.out
+
+./hello.out
