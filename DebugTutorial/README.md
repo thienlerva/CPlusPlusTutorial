@@ -1,57 +1,56 @@
 Debug c++ program on terminal<br/>
 cd directory <br/>
-make (to compile and run)
+make (to compile and run)<br/>
 
-Debug steps: 
-gdb 
-file test 
-break main
+Debug steps: <br/>
+gdb <br/>
+file test <br/>
+break main <br/>
 run
 
 https://www.srcmake.com/home/cpp-debug-gdb https://www.tutorialspoint.com/gnu_debugger/gdb_debugging_example1.htm
 
-Refresh the display: refresh (or Control - L) 
-Run the prgram: run
-See your code: layout next 
-Set break point or multiple breakpoints: break main, break factorial, break 11
-break *00aaAA11
-Clear break point: break main
-Go to next line: next (n)
-Set into function: step
-Continue to next break point: continue
-Print a variale value: print variable Print an array: print *arr@len
-Watch a variable for changes: watch VARIABLE 
-info func // list all functions 
-disassemble main || isPrime // show assemble code of a function
+Refresh the display: refresh (or Control - L) <br/>
+Run the prgram: run <br/>
+See your code: layout next || layout src<br/>
+Set break point or multiple breakpoints: break main, break factorial, break 11 <br/>
+break *00aaAA11<br/>
+Clear break point: break main<br/>
+Go to next line: next (n)<br/>
+Set into function: step<br/>
+Continue to next break point: continue<br/>
+Print a variale value: print variable Print an array: print *arr@len<br/>
+Watch a variable for changes: watch VARIABLE <br/>
+info func // list all functions <br/>
+disassemble main || isPrime // show assemble code of a function<br/>
 
-cd GNUDebugger
-make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors 
-make or g++ -g -lm -w main.cpp 
-gdb run(filename) or gdb a.out
-layout next || layout src
-break isPrimes
-run
-n
-n
-p i
-p n
-n
-step
-watch x
-clear isPrimes
-q
-!gcc to gcc - q -lm 
-set argc 20
-print argc@2
-run
-backtrace full
+cd GNUDebugger<br/>
+make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors <br/>
+make or g++ -g -lm -w main.cpp <br/>
+gdb run(filename) or gdb a.out<br/>
+layout next || layout src<br/>
+break isPrimes<br/>
+run<br/>
+n<br/>
+p i<br/>
+p n<br/>
+n<br/>
+step<br/>
+watch x<br/>
+clear isPrimes<br/>
+q<br/>
+!gcc to gcc - q -lm <br/>
+set argc 20<br/>
+print argc@2<br/>
+run<br/>
+backtrace full<br/>
 
-cd PrimeNumber
-either make file or g++ -g -lm -Wall main.cpp or g++ main.cpp -g
-either gdb prine or gdb a.out
-break 10
-break 12
-run
-layout next || layout src 
+cd PrimeNumber<br/>
+either make file or g++ -g -lm -Wall main.cpp or g++ main.cpp -g<br/>
+either gdb prine or gdb a.out<br/>
+break 10<br/>
+break 12<br/>
+run<br/>
+layout next || layout src <br/>
 Note: sometimes it's stuck at new threat, just close the terminal and restart
 
