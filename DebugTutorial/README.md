@@ -1,5 +1,5 @@
-Debug c++ program on terminal
-cd directory 
+Debug c++ program on terminal<br/>
+cd directory <br/>
 make (to compile and run)
 
 Debug steps: 
