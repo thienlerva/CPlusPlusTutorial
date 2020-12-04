@@ -29,6 +29,7 @@ make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors <br/>
 make or g++ -g -lm -w main.cpp <br/>
 gdb run(filename) or gdb a.out<br/>
 layout next || layout src<br/>
+if show assembly code, type refresh <br/>
 break isPrimes<br/>
 run<br/>
 n<br/>
