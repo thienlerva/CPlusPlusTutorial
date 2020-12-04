@@ -1,0 +1,3 @@
+1, an, le, a
+2, vy, le, a
+3, mi, le, a

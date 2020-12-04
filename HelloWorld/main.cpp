@@ -13,13 +13,13 @@ int main() {
     int num1 = 10;
     int num2 = 20;
     int sum = total(num1, num2);
-//    double x = sqrt(5);
-//    cout << "Square root of 4: "<< sqrt(4) << endl;
-//      cout << "Power of 2: " << pow(4, 2) << endl;
-//      cout << "Floor of 5.12: " << floor(5.12) << endl;
-//      cout << "Ceil of 5.72: " << ceil(5.72) << endl;
-//    cout << sum << endl;
-//    cout << "Num1: " << num1 << " ,num2: " << num2 << endl;
+    double x = sqrt(5);
+    cout << "Square root of 4: "<< sqrt(4) << endl;
+      cout << "Power of 2: " << pow(4, 2) << endl;
+      cout << "Floor of 5.12: " << floor(5.12) << endl;
+      cout << "Ceil of 5.72: " << ceil(5.72) << endl;
+    cout << sum << endl;
+    cout << "Num1: " << num1 << " ,num2: " << num2 << endl;
 //    
 //    string fish = "Tuna";
 //    string *fishPointer;
