@@ -14,6 +14,14 @@ Person::Person(string id, string firstName, string lastName) {
     this->lastName = lastName;
 }
 
+string Person::getFirstName() {
+    return this->firstName;
+}
+
+string Person::getLastName() {
+    return this->lastName;
+}
+
 string Person::toString() {
    return this->id + " " + this->firstName + " " + this->lastName;
 }

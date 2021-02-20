@@ -8,6 +8,8 @@ class Person {
     public:
         Person();
         Person(string id, string firstName, string lastName);
+        virtual string getFirstName();
+        virtual string getLastName();
         virtual string toString();
         
     private:

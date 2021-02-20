@@ -9,35 +9,33 @@
 #include <ostream>
 #include <ctype.h>
 #include <sstream>
+#include <list>
 
 using namespace std;
 
 void writeToDB(string &fileName);
-void readDB(string &fileName);
+list<Student> readDB(string &fileName);
 Student getStudentInfo(string &input);
+bool studentNameComparable(Student &s1, Student &s2) {
+    return s1.getFirstName() > s2.getFirstName();
+}
 
 int main(int argc, char** argv) {
     
-//    Person person("1", "Thien", "Le");
-//    Student student1("3", "Jennifer", "Le", 'A');
-//    
-//    Person *std1 = &student1;
-//    
-//    Student student2("4", "Anthony", "Le", 'A');
-//    
-//    Person *std2 = &student2;
-//    vector<Student> students;
-//    
-//    students.push_back(student1);
-//    students.push_back(student2);
-//    
-//    Instructor instructor("1", "Thien", "Le", "Computer science", students);
-//    vector<Student> myStudent = instructor.getStudents();
-//    cout << instructor.toString() << endl;
     
     string fileName = "student.txt";
     //writeToDB(fileName);
-    readDB(fileName);
+    list<Student> students = readDB(fileName);
+    
+    for (Student s : students) {
+        cout << s.toString() << endl;
+    }
+    
+    students.sort(studentNameComparable);
+    
+    for (Student s : students) {
+        cout << s.toString() << endl;
+    }
     
     return 0;
 }
@@ -92,19 +90,21 @@ void writeToDB(string &fileName) {
       
 }
 
-void readDB(string &fileName) {
+list<Student> readDB(string &fileName) {
     
     ifstream reader(fileName);
     string line;
+    list<Student> students;
     
     if (reader.is_open()) {
         for (int i = 0; !reader.eof(); i++) {
             getline(reader, line);
             Student student = getStudentInfo(line);
-            cout <<student.toString() << "\n";
+            students.push_back(student);
         }
         reader.close();
     }
+    return students;
 }
 
 Student getStudentInfo(string &input) {

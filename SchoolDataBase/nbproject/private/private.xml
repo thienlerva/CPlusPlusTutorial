@@ -7,10 +7,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Person.h</file>
             <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Person.cpp</file>
+            <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Student.h</file>
             <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Instructor.cpp</file>
-            <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Makefile</file>
             <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/main.cpp</file>
             <file>file:/Users/thienle/NetBeansProjects/SchoolDataBase/Student.cpp</file>
         </group>
