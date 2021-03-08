@@ -57,6 +57,28 @@ int compareQSort(const void* a, const void* b) {
     return A-B;
 }
 
+float square(int num) {
+    return num*num;
+}
+
+float cube(int num) {
+    return num*num*num;
+}
+
+float squareRoot(int num) {
+    return sqrt(num);
+}
+
+// float calc(int num, float (*op)(int)) {
+//     return op(num);
+// }
+
+typedef float (*op_t)(int);
+
+float calc(int num, op_t op) {
+    return op(num);
+}
+
 int main() {
 
     int c;
@@ -90,4 +112,8 @@ int main() {
          printf("%d ", *(A + i));
     }
     printf("\n");
+
+    printf("square:\t%.2f\n", calc(5, square));
+    printf("cube:\t%.2f\n", calc(5, cube));
+    printf("square root:\t%.2f\n", calc(5, squareRoot));
 }
