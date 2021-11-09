@@ -12,7 +12,7 @@ https://www.srcmake.com/home/cpp-debug-gdb https://www.tutorialspoint.com/gnu_de
 
 Refresh the display: refresh (or Control - L) <br/>
 Run the prgram: run <br/>
-See your code: layout next || layout src<br/>
+See your code: layout next or layout src<br/>
 Set break point or multiple breakpoints: break main, break factorial, break 11 <br/>
 break *00aaAA11<br/>
 Clear break point: break main<br/>
@@ -28,7 +28,7 @@ cd GNUDebugger<br/>
 make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors <br/>
 make or g++ -g -lm -w main.cpp <br/>
 gdb run (specified in Makefile) or gdb a.out<br/>
-layout next (|| layout src)<br/>
+layout next (or layout src)<br/>
 if show assembly code, type refresh <br/>
 break isPrimes // does not work<br/>
 b 20<br/>
