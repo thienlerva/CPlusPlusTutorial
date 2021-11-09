@@ -28,9 +28,10 @@ cd GNUDebugger<br/>
 make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors <br/>
 make or g++ -g -lm -w main.cpp <br/>
 gdb run (specified in Makefile) or gdb a.out<br/>
-layout next || layout src<br/>
+layout next (|| layout src)<br/>
 if show assembly code, type refresh <br/>
-break isPrimes<br/>
+break isPrimes // does not work<br/>
+b 20<br/>
 run<br/>
 n<br/>
 p i<br/>
@@ -52,6 +53,6 @@ either gdb prime or gdb a.out<br/>
 break 10<br/>
 break 12<br/>
 run<br/>
-layout next || layout src <br/>
+layout next (|| layout src) <br/>
 Note: sometimes it's stuck at new threat, just close the terminal and restart
 
