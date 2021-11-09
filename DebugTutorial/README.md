@@ -27,7 +27,7 @@ disassemble main || isPrime // show assemble code of a function<br/>
 cd GNUDebugger<br/>
 make or gcc -g -lm -std=c99 -w main.c -w != Wall to show errors <br/>
 make or g++ -g -lm -w main.cpp <br/>
-gdb run(filename) or gdb a.out<br/>
+gdb run (specified in Makefile) or gdb a.out<br/>
 layout next || layout src<br/>
 if show assembly code, type refresh <br/>
 break isPrimes<br/>
@@ -47,8 +47,8 @@ run<br/>
 backtrace full<br/>
 
 cd PrimeNumber<br/>
-either make file or g++ -g -lm -Wall main.cpp or g++ main.cpp -g<br/>
-either gdb prine or gdb a.out<br/>
+either make prime or g++ -g -lm -Wall main.cpp or g++ main.cpp -g<br/>
+either gdb prime or gdb a.out<br/>
 break 10<br/>
 break 12<br/>
 run<br/>
