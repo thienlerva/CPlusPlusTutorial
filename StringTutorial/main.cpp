@@ -1,8 +1,14 @@
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <cstdlib>
+#include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
+
+void readFile(const char *fileName);
 
 int main(int argc, char** argv) {
 
@@ -48,6 +54,56 @@ int main(int argc, char** argv) {
     s7.insert(14, "lucky ");
     cout << s7 << endl;
     
+    string str("Please split this sentence into tokens");
+    
+    char *cstr = new char[str.length() + 1];
+    strcpy(cstr, str.c_str());
+    
+    // cstr now contains a c-string copy of str
+    char *p = strtok(cstr, " ");
+    
+    while(p!=0) {
+        cout << p << '\n';
+        p = strtok(NULL, " ");
+    }
+    
+    delete[] cstr;
+    
+    string testStr = "Hello world";
+    char *test = const_cast<char*>(testStr.c_str());
+    printf("%s\n", test);
+    
+    string fileName = "data.txt";
+    
+    FILE *fp = fopen(fileName.c_str(), "w+");
+    char data[] = "Writing file with FSeek";
+    fwrite(data, 1, sizeof(data), fp);
+    fclose(fp);
+    
+    readFile(fileName.c_str());
+    
     return 0;
+}
+
+void readFile(const char *fileName) {
+    FILE *fp;
+    char ch;
+    fp = fopen(fileName, "r");
+    
+    if (!fp) {
+        printf("File does not exist\n");
+        return;
+    }
+    
+    while(1) {
+        ch = fgetc(fp);
+        if (ch == EOF) {
+            break;
+        }
+        printf("%c", ch);
+        
+    }
+    
+    fclose(fp);
 }
 

@@ -5,6 +5,14 @@
 int sum (int *arr, int n);
 int isPrime(int x);
 int* getPrimes(int n);
+void swapNumPrt(int *a, int *b);
+
+typedef struct {
+    char *firstName;
+    char *lastName;
+    int age;
+} Person;
+
 
 int main(int argc, char** argv) {
 
@@ -13,6 +21,7 @@ int main(int argc, char** argv) {
 //    
 //    printf("The sum of the array is: %d\n", total);
   
+  
     int n;
   printf("Enter an integer: ");
   scanf("%d", &n);
@@ -20,10 +29,22 @@ int main(int argc, char** argv) {
   int flag = isPrime(n);
   
   if (flag == 1) {
-      printf("%d is a prime number", n);
+      printf("%d is a prime number\n", n);
   } else {
-      printf("%d is a not a prime number", n);
+      printf("%d is a not a prime number\n", n);
   }
+  
+  int x = 5, y = 10;
+  
+  swapNumPrt(&x, &y);
+  
+  printf("x is now: %d\n", x);
+  printf("y is now: %d\n", y);
+  
+  Person aPerson;
+  
+  getPersonInfo(&aPerson);
+  printPersonInfo(&aPerson);
   
 //    int n = 10;
 //    if (argc == 2) {
@@ -80,4 +101,12 @@ int isPrime(int x) {
     }
     return 1;
 }
+
+void swapNumPrt(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+
 

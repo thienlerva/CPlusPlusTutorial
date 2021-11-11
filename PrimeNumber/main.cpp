@@ -5,6 +5,17 @@
 using namespace std;
 
 int isPrime(int &num);
+
+struct Book {
+    string title;
+    string author;
+    int year;
+    double price;
+};
+
+void getBookInfo(Book *aBook);
+void printBookInfo(Book *aBook);
+
 int main(int argc, char** argv) {
 
     int number = 4;
@@ -13,6 +24,10 @@ int main(int argc, char** argv) {
     string answer = isPrime(number) ? " is a prime number" : " is not a prime number";
     
     cout << number << answer << endl;
+    
+    Book aBook;
+    getBookInfo(&aBook);
+    printBookInfo(&aBook);
   
     return 0;
 }
@@ -26,5 +41,26 @@ int isPrime(int &num) {
         }
     }
     return 1;
+}
+
+void getBookInfo(Book *aBook) {
+    cout << "Enter book title: ";
+    
+    getline(cin, aBook->title);
+    
+    cout << "Enter author: ";
+    getline(cin, aBook->author);
+    cout << "Enter published year: ";
+    cin >> aBook->year;
+    cout << "Enter price: ";
+    cin >> aBook->price;
+    
+}
+
+void printBookInfo(Book *aBook) {
+    cout << "Book: " << aBook->title << endl;
+    cout << "Author: " << aBook->author << endl;
+    cout << "Year: " << aBook->year << endl;
+    cout << "Price: $" << aBook->price << endl;
 }
 
