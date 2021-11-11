@@ -50,8 +50,8 @@ backtrace full<br/>
 cd PrimeNumber<br/>
 either make prime or g++ -g -lm -Wall main.cpp or g++ main.cpp -g<br/>
 either gdb prime or gdb a.out<br/>
-break 10<br/>
-break 12<br/>
+break 22<br/>
+break 24<br/>
 run<br/>
 layout next (|| layout src) <br/>
 Note: sometimes it's stuck at new threat, just close the terminal and restart
