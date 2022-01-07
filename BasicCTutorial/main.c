@@ -117,6 +117,8 @@ int main(int argc, char** argv) {
     printf("Dynamic allocation, %s, %d.\n", myPerson->name, myPerson->age);
     free(myPerson);
     
+    printf("\n");
+    
     int numOfFish = 4;
     int *numOfFishPtr = &numOfFish;
     
@@ -124,19 +126,30 @@ int main(int argc, char** argv) {
      * Address of pointer: numOfFishPtr or &numOfFish
      * Value of numOfFish: *numOfFishPtr or numOfFish
      * Since array is a pointer, treat like pointer: &A, *A
-     * Address of array: &A[i] = (A + 1)
-     * Value of array at i: A[i] = *(A + 1)
+     * when passing array into a function, add(A, size); // A or &A
+     * Address of array: &A, &A[i] = (A + i)
+     * Value of array at i: A[i] = *(A + i)
      * 
      */
     int A[5] = {1, 2, 3, 4, 5};
     int *pA = A; // *pA = &A because array is always a pointer, can ignore &A
     //pA++;  // valid, A++ is not valid
     
+    printf("Array A[5]: ");
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *(A + i));
+    }
+    printf("\n");
+    
     printf("Address of pointer pA: %p, value: %d\n", pA, *pA);
     printf("Address of next pointer pA: %p, value: %d\n", pA+1, *(pA+1));
-    printf("Address of first index: %p, value: %d\n", &A, *A); // &A[0]
-    printf("Address of first index: %p, value: %d\n", A, *A);  // &A = A, *A = A[0]
-    printf("Address of third index: %d, value: %d\n", A + 2, A[2]);
+    printf("Address of first array index &A: %p, value: %d\n", &A, *A); // &A[0]
+    printf("Address of second array index &A[1]: %p, value: %d\n", &A[1], *(A + 1));
+    printf("Address of first array index - A: %p, value: %d\n", A, *A);  // &A = A, *A = A[0]
+    printf("Address of second array index - (A + 1): %p, value: %d\n", A + 1, A[1]);
+    printf("Address of third array index - (A + 2): %p, value: %d\n", A + 2, *(A + 2));
+    
+    printf("\n");
     
     // Pointer Arithmetics ++, --
     int intA[5] = {10, 20, 30, 40, 50};
@@ -161,7 +174,7 @@ int main(int argc, char** argv) {
     printf("After increment p: %d\n", pp);
     
     int size = sizeof(A) / sizeof(A[0]);
-    int total = add(A, size);
+    int total = add(A, size); // A or &A
     printf("Sum of array: %d\n", total);
     
     int a = 5;
@@ -223,7 +236,7 @@ int add(int *A, int size) { // *A = A[]
     int total = 0;
     
     for (int i = 0; i < size; i++) {
-        total += *(A + 1); // sum += A[i]
+        total += *(A + i); // sum += A[i]
     }
     return total;
 }

@@ -74,6 +74,23 @@ int main(int argc, char** argv) {
     firstColor = green;
     cout <<"Value of firstColor: " << firstColor << endl;
     
+    string name = "John";
+    string testName;
+    cout << "What is your name? ";
+    cin >> testName;
+    
+    if (testName.find(name) != string::npos) {
+        cout << "Hello " << name << endl;
+    } else {
+        cout << "Go away\n";
+    }
+    
+    cout << "What is your age? ";
+    int age;
+    cin >> age;
+    
+    cout << ((age >= 16) ? "You can learn to drive" : "You are underage to learn to drive!\n");
+    
     // for loop
     int arr[] = {1, 2, 3, 4, 5};
     
