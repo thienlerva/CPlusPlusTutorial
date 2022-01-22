@@ -49,6 +49,9 @@ int add(int *A, int size);
 int *sumPtr(int *a, int *b);
 int factorial(int num);
 
+int strLength(char *str);
+void revstr(char *str);
+
 int main(int argc, char** argv) {
 
 //    printf("Hello, world!\n");
@@ -106,7 +109,8 @@ int main(int argc, char** argv) {
     move(&p);
     printf("Move pointer by one: %d, %d.\n", p.x, p.y);
     
-    guessNumber();
+    //guessNumber();
+    
     
     //Dynamic allocation
     person *myPerson = (person *) malloc(sizeof(person));
@@ -186,7 +190,16 @@ int main(int argc, char** argv) {
     int fact = factorial(numFact);
     printf("Factorial of numFact is: %d\n", fact);
     
+    char str[40];
+    printf("Enter a string: ");
+    scanf("%s", str);
     
+    int length = strLength(str);
+    printf("Length of string: %d\n", length);
+    printf("Length of string: %zd\n", (strlen(str)));
+    
+    revstr(str);
+    printf("The reversed string: %s\n", str);
     
     return 0;
 }
@@ -254,5 +267,39 @@ int factorial(int num) {
         return 1;
     } else {
         return num * factorial(num - 1);
+    }
+}
+
+int strLength(char *str) {
+    int i = 0;
+    while (*str != '\0') {
+        str++;
+        i++;
+    }
+    return i;
+}
+void revstr(char *str) {
+    int len, i;
+    char *start, *end, temp;
+    
+    len = strlen(str);
+    start = str;
+    end = str;
+    
+    for (i = 0; i < len - 1; i++) {
+        end++;
+        //printf("%c", *end);
+    }
+    printf("%s\n", start);
+    printf("%c\n", *start);
+    printf("%c\n", *end);
+    
+    for (i = 0; i < len / 2; i++) {
+        temp = *end;
+        *end = *start;
+        *start = temp;
+        
+        start++;
+        end--;
     }
 }
